@@ -1,0 +1,135 @@
+.navbar {
+  display: flex;
+  /* Navbar'ı yatay hizalar */
+  padding: 16px;
+  /* İç boşluk ekler */
+  box-shadow: 0 1px 3px -2px black;
+  /* Hafif bir gölge efekti ekler */
+  justify-content: space-around;
+  /* İçindeki öğeleri eşit şekilde dağıtır */
+}
+
+.nav-logo {
+  display: flex;
+  /* Logo ve yazıyı yatay hizalar */
+  align-items: center;
+  /* Dikeyde ortalar */
+  gap: 10px;
+  /* Logo ve yazı arasına 10px boşluk ekler */
+}
+
+.nav-logo p {
+  color: #171717;
+  /* Yazı rengini koyu gri yapar */
+  font-size: 38px;
+  /* Yazı boyutunu büyütür */
+  font-weight: 600;
+  /* Yazıyı kalın yapar */
+}
+
+.nav-menu {
+  display: flex;
+  /* Menü öğelerini yatay hizalar */
+  align-items: center;
+  /* Dikeyde ortalar */
+  list-style: none;
+  /* Madde işaretlerini kaldırır */
+  gap: 50px;
+  /* Menü öğeleri arasına 50px boşluk ekler */
+  color: #626262;
+  /* Yazı rengini gri yapar */
+  font-size: 20px;
+  /* Yazı boyutunu ayarlar */
+  font-weight: 500;
+  /* Yazıyı orta kalınlıkta yapar */
+}
+
+.nav-menu li {
+  display: flex;
+  /* İçeriği yatay hizalar */
+  flex-direction: column;
+  /* İçerikleri dikey olarak sıralar */
+  align-items: center;
+  /* Dikeyde ortalar */
+  justify-content: center;
+  /* İçeriği ortalar */
+  gap: 3px;
+  /* Altındaki çizgiyle arasında 3px boşluk bırakır */
+  cursor: pointer;
+  /* Fareyle üzerine gelindiğinde imleci el simgesi yapar */
+}
+
+.nav-menu hr {
+  border: none;
+  /* Varsayılan kenarlıkları kaldırır */
+  width: 80%;
+  /* Çizginin genişliğini yüzde 80 yapar */
+  height: 3px;
+  /* Çizginin kalınlığını ayarlar */
+  border-radius: 10px;
+  /* Köşelerini yuvarlak yapar */
+  background: #ff4141;
+  /* Çizginin rengini kırmızı yapar */
+}
+
+.nav-login-cart {
+  display: flex;
+  /* Buton ve sepet ikonunu yatay hizalar */
+  align-items: center;
+  /* Dikeyde ortalar */
+  gap: 45px;
+  /* Öğeler arasına 45px boşluk ekler */
+}
+
+.nav-login-cart button {
+  width: 157px;
+  /* Butonun genişliğini ayarlar */
+  height: 58px;
+  /* Butonun yüksekliğini ayarlar */
+  outline: none;
+  /* Dış çizgiyi kaldırır */
+  border: 1px solid #7a7a7a;
+  /* Butona gri bir kenarlık ekler */
+  border-radius: 75px;
+  /* Köşeleri yuvarlak yapar */
+  color: #515151;
+  /* Yazı rengini koyu gri yapar */
+  font-size: 20px;
+  /* Yazı boyutunu ayarlar */
+  font-weight: 500;
+  /* Yazıyı orta kalınlıkta yapar */
+  background: white;
+  /* Arka plan rengini beyaz yapar */
+  cursor: pointer;
+  /* Üzerine gelindiğinde fare imlecini el simgesi yapar */
+}
+
+.nav-login-cart button:active {
+  background: #f3f3f3;
+  /* Butona basıldığında arka plan rengini açık gri yapar */
+}
+
+.nav-cart-count {
+  width: 22px;
+  /* Sepet sayacının genişliğini ayarlar */
+  height: 22px;
+  /* Sepet sayacının yüksekliğini ayarlar */
+  display: flex;
+  /* İçeriği hizalar */
+  justify-content: center;
+  /* Yatayda ortalar */
+  align-items: center;
+  /* Dikeyde ortalar */
+  margin-top: -35px;
+  /* Yukarı kaydırarak sepete hizalar */
+  margin-left: -55px;
+  /* Sola kaydırarak sepete hizalar */
+  border-radius: 11px;
+  /* Tam yuvarlak hale getirir */
+  font-size: 14px;
+  /* Yazı boyutunu ayarlar */
+  background: red;
+  /* Arka plan rengini kırmızı yapar */
+  color: #fff;
+  /* Yazı rengini beyaz yapar */
+}

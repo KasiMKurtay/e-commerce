@@ -1,0 +1,87 @@
+.offers {
+  /* .offers sınıfı için stil */
+  width: 65%;
+  /* Bu öğe sayfanın %65'lik genişliğine sahip olur */
+  height: 60vh;
+  /* Yüksekliği ekranın %60'ı kadar olur */
+  display: flex;
+  /* İçeriklerini esnek kutu düzenine yerleştirir (flexbox) */
+  margin: auto;
+  /* Yatayda ortalar */
+  padding: 0px 140px;
+  /* Sol ve sağ kenarlara 140px boşluk bırakır */
+  margin-bottom: 150px;
+  /* Alt kısma 150px boşluk ekler */
+  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  /* Arka plan için gradyan renk geçişi */
+}
+
+.offers-left {
+  /* .offers-left bölümü için stil */
+  flex: 1;
+  /* Bu öğe, esnek kutu düzeninde eşit genişlikte bir alan kaplar */
+  display: flex;
+  /* İçeriği esnek kutu düzenine yerleştirir (flexbox) */
+  flex-direction: column;
+  /* İçerikleri dikeyde sıralar (başlık, açıklama, buton) */
+  justify-content: center;
+  /* İçeriği dikeyde ortalar */
+}
+
+.offers-left h1 {
+  /* Başlık (h1) için stil */
+  color: #171717;
+  /* Başlık rengini koyu gri yapar */
+  font-size: 80px;
+  /* Başlık fontunu çok büyük yapar */
+  font-weight: 600;
+  /* Başlık metnini kalın yapar */
+}
+
+.offers-left p {
+  /* Açıklama (p) için stil */
+  color: #171717;
+  /* Metnin rengini koyu gri yapar */
+  font-size: 22px;
+  /* Metnin fontunu daha küçük yapar */
+  font-weight: 600;
+  /* Metni kalın yapar */
+}
+
+.offers-left button {
+  /* Buton için stil */
+  width: 282px;
+  /* Butonun genişliği 282px olur */
+  height: 70px;
+  /* Butonun yüksekliği 70px olur */
+  border-radius: 35px;
+  /* Butonun kenarlarını yuvarlatır */
+  background: #ff4141;
+  /* Butonun arka planını kırmızı yapar */
+  border: none;
+  /* Butonun kenar çerçevesini kaldırır */
+  color: #fff;
+  /* Buton metnini beyaz yapar */
+  font-size: 22px;
+  /* Buton metnini büyük yapar */
+  font-weight: 500;
+  /* Buton metnini normal kalınlıkta yapar */
+  margin-top: 30px;
+  /* Butona üstten 30px boşluk ekler */
+  cursor: pointer;
+  /* Fare ile üzerine gelindiğinde işaretçi değişir */
+}
+
+.offers-right {
+  /* .offers-right bölümü için stil */
+  flex: 1;
+  /* Sağ bölüm de esnek kutuda eşit genişlikte olur */
+  display: flex;
+  /* İçeriği esnek kutu düzenine yerleştirir (flexbox) */
+  align-items: center;
+  /* İçeriği dikeyde ortalar */
+  justify-content: flex-end;
+  /* İçeriği sağa yaslar */
+  padding: 50px;
+  /* Sağ bölümün etrafına 50px boşluk ekler */
+}
