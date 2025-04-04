@@ -1,0 +1,103 @@
+.hero {
+  /* Hero bileşeninin ana kapsayıcı div'i */
+  height: 100vh;
+  /* Sayfanın tamamını kaplayacak şekilde yüksekliği ayarlar */
+  background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+  /* Üstten alta geçişli bir arka plan rengi */
+  display: flex;
+  /* İçerikleri yan yana hizalamak için flexbox kullanır */
+}
+
+.hero-left {
+  /* Sayfanın sol tarafındaki alan */
+  flex: 1;
+  /* Sol tarafın genişliğini sağ tarafa göre eşitler */
+  display: flex;
+  /* İçeriği dikey olarak hizalamak için flexbox kullanır */
+  flex-direction: column;
+  /* İçerikleri dikey hizalar */
+  justify-content: center;
+  /* İçerikleri dikeyde ortalar */
+  gap: 20px;
+  /* İçerikler arasında 20px boşluk bırakır */
+  padding: 180px;
+  /* Etrafına 180px boşluk ekler */
+  line-height: 1.1;
+  /* Satır yüksekliğini ayarlar */
+}
+
+.hero-left h2 {
+  /* Hero içindeki başlık */
+  color: #090909;
+  /* Yazı rengini siyaha yakın yapar */
+  font-size: 26px;
+  /* Font boyutunu 26px yapar */
+  font-weight: 600;
+  /* Yazı kalınlığını 600 yapar (yarı kalın) */
+}
+
+.hero-left p {
+  /* Hero içindeki paragraflar */
+  color: #171717;
+  /* Yazı rengini koyu gri yapar */
+  font-size: 100px;
+  /* Yazı boyutunu 100px yapar (büyük başlık gibi görünmesini sağlar) */
+  font-weight: 700;
+  /* Yazı kalınlığını 700 yapar (tam kalın) */
+}
+
+.hand-hand-icon {
+  /* "new" yazısı ve el simgesini içeren div */
+  display: flex;
+  /* İçerikleri yatay hizalar */
+  align-items: center;
+  /* İçerikleri dikeyde ortalar */
+  gap: 20px;
+  /* Elemanlar arasında 20px boşluk bırakır */
+}
+
+.hand-hand-icon img {
+  /* El simgesi için stil */
+  width: 105px;
+  /* Genişliğini 105px olarak ayarlar */
+}
+
+.hero-latest-btn {
+  /* "Latest Collection" butonu */
+  display: flex;
+  /* İçerikleri yatay hizalar */
+  justify-content: center;
+  /* Buton içeriğini ortalar */
+  align-items: center;
+  /* İçeriği dikeyde ortalar */
+  gap: 15px;
+  /* Buton içindeki yazı ve ikon arasında 15px boşluk bırakır */
+  width: 310px;
+  /* Butonun genişliğini 310px yapar */
+  height: 70px;
+  /* Butonun yüksekliğini 70px yapar */
+  border-radius: 75px;
+  /* Butona yuvarlak köşeler verir */
+  margin-top: 30px;
+  /* Üstüne 30px boşluk bırakır */
+  background: #ff4141;
+  /* Butonun arka plan rengini kırmızı yapar */
+  color: #fff;
+  /* Yazı rengini beyaz yapar */
+  font-size: 22px;
+  /* Yazı boyutunu 22px yapar */
+  font-weight: 500;
+  /* Yazıyı orta kalın yapar */
+}
+
+.hero-right {
+  /* Sayfanın sağ tarafındaki alan */
+  flex: 1;
+  /* Sağ tarafın genişliğini sol tarafa göre eşitler */
+  display: flex;
+  /* İçeriği hizalamak için flexbox kullanır */
+  align-items: center;
+  /* İçeriği dikeyde ortalar */
+  justify-content: center;
+  /* İçeriği yatayda ortalar */
+}

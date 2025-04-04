@@ -1,0 +1,49 @@
+.item {
+  /* Ürün kartı için genel stil */
+  width: 350px;
+  /* Ürünün genişliğini 350px olarak ayarlar */
+}
+
+.item p {
+  /* Ürün içindeki paragraflar */
+  margin: 6px 0px;
+  /* Üst ve alt boşluğu 6px yapar, yatay boşluk bırakmaz */
+}
+
+.item-prices {
+  /* Ürün fiyatlarını içeren alan */
+  display: flex;
+  /* Fiyatları yatay hizalar */
+  gap: 20px;
+  /* Fiyatlar arasında 20px boşluk bırakır */
+}
+
+.item-price-new {
+  /* Yeni (indirimli) fiyat */
+  color: #374151;
+  /* Yazı rengini koyu gri yapar */
+  font-size: 18px;
+  /* Yazı boyutunu 18px yapar */
+  font-weight: 600;
+  /* Yazı kalınlığını orta seviyede yapar */
+}
+
+.item-price-old {
+  /* Eski (üstü çizili) fiyat */
+  color: #8c8c8c;
+  /* Yazı rengini açık gri yapar */
+  font-size: 18px;
+  /* Yazı boyutunu 18px yapar */
+  text-decoration: line-through;
+  /* Üstü çizili görünmesini sağlar */
+  font-weight: 500;
+  /* Yazıyı biraz kalın yapar */
+}
+
+.item:hover {
+  /* Ürün üzerine gelindiğinde uygulanacak stil */
+  transform: scale(1.05);
+  /* Ürünü %5 büyütür */
+  transition: 0.6s;
+  /* Animasyonu 0.6 saniyede tamamlar */
+}
