@@ -7,6 +7,9 @@ import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import LoginSignup from "./Pages/LoginSignup";
 import Footer from "./Components/Footer/Footer";
+import men_banner from "./Components/Assets/banner_mens.png";
+import women_banner from "./Components/Assets/banner_women.png";
+import kid_banner from "./Components/Assets/banner_kids.png";
 
 function App() {
   return (
@@ -18,11 +21,20 @@ function App() {
           {/*Yönelndirme rotalarını tanımlar */}
           <Route path="/" element={<Shop />} />
           {/*Ana sayfa, Shop bileşenini render eder (Yani ana sayfa Shop olarak gösterilir) */}
-          <Route path="/mens" element={<ShopCategory category="men" />} />
+          <Route
+            path="/mens"
+            element={<ShopCategory banner={men_banner} category="men" />}
+          />
           {/* /mens yolu, ShopCategory bileşenini render ve "men" kategorasini render eder */}
-          <Route path="/womens" element={<ShopCategory category="women" />} />
+          <Route
+            path="/womens"
+            element={<ShopCategory banner={women_banner} category="women" />}
+          />
           {/* /womens yolu, ShopCategory bileşenini ve "women" kategoreisini render eder */}
-          <Route path="/kids" element={<ShopCategory category="kid" />} />
+          <Route
+            path="/kids"
+            element={<ShopCategory banner={kid_banner} category="kid" />}
+          />
           {/* /kids yolu, ShopCategory bileşenini render eder */}
           <Route path="product" element={<Product />}>
             {/*Dinamk productId yolu, belirli bir ürün sayfasını render eder */}
