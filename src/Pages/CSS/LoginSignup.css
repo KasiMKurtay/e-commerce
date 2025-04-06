@@ -60,7 +60,8 @@
   color: #ff4141;
   font-weight: 600;
 }
-.loginsignup-agree{
+
+.loginsignup-agree {
   display: flex;
   align-items: center;
   margin-top: 25px;
@@ -68,4 +69,31 @@
   color: #5c5c5c;
   font-size: 18px;
   font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .loginsignup-container {
+    padding: 20px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 24px;
+  }
+
+  .loginsignup-fields input {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .loginsignup-container button {
+    font-size: 18px;
+  }
+
+  .loginsignup-login {
+    font-size: 14px;
+  }
+
+  .loginsignup-agree {
+    font-size: 14px;
+  }
 }
