@@ -1,27 +1,143 @@
 .new-collections {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 100px;
+  align-items: center;
+  gap: 15px;
+  margin: 80px 0;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .new-collections h1 {
   color: #171717;
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  padding-bottom: 15px;
 }
 
-.new-collections hr {
-  width: 200px;
-  height: 6px;
-  border-radius: 10px;
-  background: #252525;
+.new-collections h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #ff4141;
+  border-radius: 2px;
 }
 
 .collections {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.collections.loading {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.skeleton-item {
+  height: 380px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .new-collections {
+    margin: 60px 0;
+  }
+
+  .new-collections h1 {
+    font-size: 36px;
+  }
+
+  .collections {
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .new-collections {
+    margin: 50px 0;
+    gap: 12px;
+  }
+
+  .new-collections h1 {
+    font-size: 32px;
+    padding-bottom: 12px;
+  }
+
+  .new-collections h1::after {
+    width: 60px;
+    height: 3px;
+  }
+
+  .collections {
+    margin-top: 40px;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .new-collections {
+    margin: 40px 0;
+    padding: 0 15px;
+  }
+
+  .new-collections h1 {
+    font-size: 28px;
+  }
+
+  .collections {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .new-collections h1 {
+    font-size: 24px;
+  }
+
+  .collections {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
