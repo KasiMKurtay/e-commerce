@@ -1,0 +1,261 @@
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #ffd6e7;
+  border-radius: 50%;
+  filter: blur(100px);
+  top: -50px;
+  left: -50px;
+  z-index: 0;
+}
+
+.hero::after {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #d6ffe7;
+  border-radius: 50%;
+  filter: blur(100px);
+  bottom: -50px;
+  right: -50px;
+  z-index: 0;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 0 0 180px;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-left h2 {
+  color: #090909;
+  font-size: 26px;
+  font-weight: 600;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-left p {
+  color: #171717;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.hand-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.hand-hand-icon img {
+  width: 105px;
+  transition: transform 0.3s ease;
+}
+
+.hand-hand-icon:hover img {
+  transform: rotate(15deg);
+}
+
+.hero-latest-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 310px;
+  height: 70px;
+  border-radius: 75px;
+  margin-top: 30px;
+  background: #ff4141;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-latest-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.hero-latest-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255,65,65,0.3);
+}
+
+.hero-latest-btn:hover::before {
+  left: 100%;
+}
+
+.hero-latest-btn:active {
+  transform: translateY(-2px);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-right img {
+  max-width: 90%;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-left {
+    padding: 0 0 0 80px;
+  }
+  
+  .hero-left p {
+    font-size: 80px;
+  }
+  
+  .hero-latest-btn {
+    width: 280px;
+    height: 65px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: auto;
+    padding: 80px 40px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-left {
+    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .hero-left h2 {
+    font-size: 22px;
+  }
+  
+  .hero-left p {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  
+  .hand-hand-icon {
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .hand-hand-icon img {
+    width: 80px;
+  }
+  
+  .hero-latest-btn {
+    width: 250px;
+    height: 60px;
+    font-size: 18px;
+    margin: 20px auto 0;
+  }
+  
+  .hero-right {
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .hero::before, .hero::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 20px;
+  }
+  
+  .hero-left h2 {
+    font-size: 18px;
+  }
+  
+  .hero-left p {
+    font-size: 48px;
+  }
+  
+  .hand-hand-icon img {
+    width: 60px;
+  }
+  
+  .hero-latest-btn {
+    width: 220px;
+    height: 55px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-left p {
+    font-size: 40px;
+  }
+  
+  .hero-latest-btn {
+    width: 200px;
+    height: 50px;
+  }
+}

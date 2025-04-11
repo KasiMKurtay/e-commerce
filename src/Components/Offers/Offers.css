@@ -1,0 +1,251 @@
+.offers {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 500px;
+  display: flex;
+  margin: 100px auto;
+  padding: 0 20px;
+  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.offers::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #ffd6e7;
+  border-radius: 50%;
+  filter: blur(120px);
+  top: -100px;
+  left: -100px;
+  z-index: 0;
+}
+
+.offers::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #d6ffe7;
+  border-radius: 50%;
+  filter: blur(120px);
+  bottom: -100px;
+  right: -100px;
+  z-index: 0;
+}
+
+.offers-content {
+  display: flex;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.offers-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.offers-left h1 {
+  color: #171717;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.offers-left p {
+  color: #171717;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 500px;
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.offers-left button {
+  width: 260px;
+  height: 70px;
+  border-radius: 35px;
+  background: #ff4141;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.offers-left button:hover {
+  background: #e63939;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 65, 65, 0.3);
+}
+
+.offers-left button:active {
+  transform: translateY(-1px);
+}
+
+.offers-left button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.offers-left button:hover::before {
+  left: 100%;
+}
+
+.offers-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.offers-right img {
+  max-width: 100%;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .offers {
+    margin: 80px auto;
+    min-height: 400px;
+  }
+
+  .offers-left {
+    padding: 40px;
+  }
+
+  .offers-left h1 {
+    font-size: 48px;
+  }
+
+  .offers-left p {
+    font-size: 18px;
+  }
+
+  .offers-left button {
+    width: 220px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .offers-right {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .offers {
+    flex-direction: column;
+    margin: 60px auto;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .offers-left {
+    padding: 40px 30px;
+    align-items: center;
+  }
+
+  .offers-left h1 {
+    font-size: 36px;
+  }
+
+  .offers-left p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .offers-left button {
+    width: 200px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .offers-right {
+    padding: 0 30px 40px;
+  }
+
+  .offers::before,
+  .offers::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .offers {
+    margin: 40px auto;
+    border-radius: 15px;
+  }
+
+  .offers-left {
+    padding: 30px 20px;
+  }
+
+  .offers-left h1 {
+    font-size: 28px;
+  }
+
+  .offers-left p {
+    font-size: 15px;
+  }
+
+  .offers-left button {
+    width: 180px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .offers-right {
+    padding: 0 20px 30px;
+  }
+}
